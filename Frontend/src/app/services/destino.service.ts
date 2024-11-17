@@ -60,7 +60,7 @@ export class DestinoService {
   destinosrecomendaciones(id: number): Observable<any> {
     return this.http.get(this.url + '/DestinosRecomendaciones/' + id);
   }
-
+  //Regresa los destinos ordenados por popularidad
   destinospopulares(): Observable<any> {
     return this.http.get(`${this.url}/DestinosPopulares`);
   }
