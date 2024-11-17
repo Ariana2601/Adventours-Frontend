@@ -237,7 +237,7 @@ export class InicioadministradorComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
+  //abre un pequeño box para confirmar si quieres o no eliminar un destino
   openDialog(id:number){
     const dialogRef = this.dialog.open(DialogoComponent);
     dialogRef.afterClosed().subscribe(result =>{
