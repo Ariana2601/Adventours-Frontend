@@ -79,7 +79,7 @@ export class ModificarempresaComponent {
       });
     } //del if
   } // de cargaForm
-
+  //Registro de la modificacion a la empresa
   onSubmit2() {
     if (this.empresamodForm.valid) {
       const empresa: Empresa = new Empresa();
