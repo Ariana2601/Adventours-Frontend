@@ -55,7 +55,7 @@ export class DetallesdestinoComponent implements OnInit {
       }
     });
   }
-
+  //Muestra la imagen de acuerdo al nombre del destino
   obtenerImagenUrl(nombre: string): string {
     const imagenNombre = nombre.toLowerCase(); // Convertir el nombre a minúsculas
     const rutaImagen = `assets/${imagenNombre}.jpg`; // Construir la ruta usando el nombre del destino
