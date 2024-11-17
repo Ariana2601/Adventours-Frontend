@@ -34,7 +34,6 @@ export class DetallesdestinoComponent implements OnInit {
     this.obtenerDestinoPorNombre(this.nombredestino);
   }
 
-
   obtenerDestinoPorNombre(nombre: string): void {
     this.destinoService.listPorNombre(nombre).subscribe({
       next: (data: Destino) => { //Recoge la info del Destino encontrado
@@ -59,6 +58,6 @@ export class DetallesdestinoComponent implements OnInit {
   obtenerImagenUrl(nombre: string): string {
     const imagenNombre = nombre.toLowerCase(); // Convertir el nombre a minúsculas
     const rutaImagen = `assets/${imagenNombre}.jpg`; // Construir la ruta usando el nombre del destino
-    return rutaImagen;
+    return rutaImagen; //devuelve la imagen
   }
 }
