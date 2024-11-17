@@ -38,4 +38,5 @@ public class Preferencia {
     @JsonBackReference
     private Usuario usuario;
 
+//Entidad terminada
 }
