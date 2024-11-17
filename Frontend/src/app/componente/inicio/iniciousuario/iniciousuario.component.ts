@@ -131,7 +131,7 @@ export class IniciousuarioComponent implements OnInit {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
+  //Redirecciona de acuerdo a lo que busca el user
   onPopulares() {
     this.router.navigate(['populares']);
   }
