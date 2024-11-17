@@ -4,7 +4,7 @@ import {HURecomendacionesDeViajeDto} from '../../model/hurecomendaciones-de-viaj
 import {DestinoService} from '../../services/destino.service';
 import {DatosService} from '../../services/datos.service';
 import {Router} from '@angular/router';
-interface DestinoExtendido extends HURecomendacionesDeViajeDto {
+interface DestinoExtendido extends HURecomendacionesDeViajeDto { //para agregar la imagen al destino
   imagenUrl: string;
 }
 @Component({
