@@ -5,3 +5,4 @@ export class Hucontacto {
   fechaEnvio: Date = new Date();
   idUsuario: number;
 }
+//completo
