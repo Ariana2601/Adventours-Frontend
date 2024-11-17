@@ -1,10 +1,7 @@
 package com.upc.tpadventours.services;
-
 import com.upc.tpadventours.entities.Destino;
 import com.upc.tpadventours.entities.Empresa;
-
 import java.util.List;
-
 public interface EmpresaService {
     public Empresa insertarEmpresa(Empresa empresa);
     public void eliminarEmpresa(Long id);
