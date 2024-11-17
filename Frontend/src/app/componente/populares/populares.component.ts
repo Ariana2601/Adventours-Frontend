@@ -47,7 +47,7 @@ export class PopularesComponent implements OnInit{
     const rutaImagen = `assets/${imagenNombre}.jpg`; // Construir la ruta usando el nombre del destino
     return rutaImagen;
   }
-
+  //Redirige a los detalles del destino elegido
   onDetalles(nombreDestino: string) {
     this.datosService.nombredestino = nombreDestino;
     alert(`Usuario encontrado! ${this.datosService.nombredestino}`);
