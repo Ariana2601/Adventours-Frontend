@@ -110,7 +110,7 @@ export class ModificardestinoComponent {
   setActividades(actividades: string): void { this.selectedActividades = actividades; }
   setRitmoViaje(ritmoViaje: string): void { this.selectedRitmoViaje = ritmoViaje; }
   setTipoViaje(tipoViaje: string): void { this.selectedTipoViaje = tipoViaje; }
-
+  //Registro de Destino
   onSubmit() {
     if (this.destinomodForm.valid) {
       const destino2: Destino = new Destino();
