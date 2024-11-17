@@ -27,7 +27,7 @@ export class DetallesdestinoComponent implements OnInit {
     private destinoService: DestinoService,
     private datosService: DatosService
   ) {
-    this.nombredestino = datosService.nombredestino;
+    this.nombredestino = datosService.nombredestino; //Asigna el nombre del destino elegido
   }
 
   ngOnInit(): void {
