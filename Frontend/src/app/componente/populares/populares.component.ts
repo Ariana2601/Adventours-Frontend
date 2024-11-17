@@ -21,7 +21,7 @@ interface DestinoExtendido extends HURecomendacionesDeViajeDto {
 })
 export class PopularesComponent implements OnInit{
   destinosPopulares: DestinoExtendido[] = [];
-  constructor(private destinoService: DestinoService, private datosService: DatosService) {}
+  constructor(private destinoService: DestinoService, private datosService: DatosService) {} //agrego datosservice para guardar los datos
   router: Router = inject(Router);
   ngOnInit(): void {
     this.obtenerDestinosPopulares();
