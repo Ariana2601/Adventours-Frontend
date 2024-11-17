@@ -37,8 +37,10 @@ export class UsuarioService {
   getList(){
     return this.listaCambio.asObservable();
   }
+  //para mostrar obtener el destino por nombre
   listId(id: number): Observable<any>{
     console.log(this.url + "/usuario/" + id)
     return this.http.get<Usuario[]>(this.url + "/usuario/" + id);
   }
+
 }
