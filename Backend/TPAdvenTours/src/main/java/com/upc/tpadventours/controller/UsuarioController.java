@@ -1,5 +1,4 @@
 package com.upc.tpadventours.controller;
-
 import com.upc.tpadventours.DtoHUs.HUIngresoSistema;
 import com.upc.tpadventours.DtoHUs.HURegistroDatos;
 import com.upc.tpadventours.dtos.UsuarioDTO;
@@ -11,10 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
-
 @RestController
 @CrossOrigin(origins = {"*", "http://localhost:4200","http://3.131.140.104/"}, allowedHeaders = "*")
 @RequestMapping("/api")
@@ -23,7 +20,6 @@ public class UsuarioController {
     private UsuarioService usuarioService;
     @Autowired
     private RolService rolService;
-
     //COMPLETO
     @PostMapping("/usuarios/registrarUsuario")
     public ResponseEntity<?> registrarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
@@ -50,7 +46,6 @@ public class UsuarioController {
         Usuario usuario = usuarioService.obtenerUsuarioPorId(id);
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
-
     //COMPLETO
     @PutMapping("/usuarios/modificarUsuario")
     //@PreAuthorize("hasAnyRole('ADMIN')")
@@ -60,21 +55,18 @@ public class UsuarioController {
         usuario = usuarioService.modificarUsuario(usuario);
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
-
     //COMPLETO
     @GetMapping("/usuarios/listarUsuarios")
     //@PreAuthorize("hasAnyRole('ADMIN')")
     public List<Usuario> listarUsuarios() {
         return usuarioService.listarUsuarios();
     }
-
     //COMPLETO
     @DeleteMapping("/usuarios/eliminarUsuario/{id}")
     //@PreAuthorize("hasAnyRole('ADMIN')")
     public void eliminarUsuario(@PathVariable Long id) {
         usuarioService.eliminarUsuario(id);
     }
-
     //COMPLETO
     @GetMapping("/usuarios/LogueoUsuario")
     //@PreAuthorize("hasAnyRole('USER','ADMIN')")
@@ -82,4 +74,4 @@ public class UsuarioController {
         return usuarioService.BuscarPorNombreUsuarioYContraseña(nombreUsuario,contraseña);
     }
 }
-
+//completo
