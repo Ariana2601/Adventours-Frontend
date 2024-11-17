@@ -79,7 +79,7 @@ export class ListasComponent {
   ngOnInit(): void {
     this.loadLista();
   }
-
+  //Para cargar la informacion a las tablas
   private loadLista(): void {
     this.usuarioService.list().subscribe({
       next: (data) => this.dataSource.data = data,
