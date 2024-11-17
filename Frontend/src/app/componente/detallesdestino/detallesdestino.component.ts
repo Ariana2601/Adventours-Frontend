@@ -37,9 +37,9 @@ export class DetallesdestinoComponent implements OnInit {
 
   obtenerDestinoPorNombre(nombre: string): void {
     this.destinoService.listPorNombre(nombre).subscribe({
-      next: (data: Destino) => {
+      next: (data: Destino) => { //Recoge la info del Destino encontrado
         if (data) {
-          alert(`Destino encontrado: ${data.nombre}`);
+          alert(`Destino encontrado: ${data.nombre}`); 
           this.destino = {
             ...data,
             imagenUrl: this.obtenerImagenUrl(data.nombre) // Asigna la imagen basada en el nombre
