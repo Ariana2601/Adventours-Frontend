@@ -27,6 +27,7 @@ export class EmpresaService {
   delete(id: number): Observable<any>{
     return this.http.delete(this.url + "/empresas/eliminarEmpresa/" + id);
   }
+  //Devuelve una empresa por el id
   empresaporid(id: number):Observable<any>{
     return this.http.get(this.url + "/empresas/obtenerEmpresaPorId/" + id);
   }
