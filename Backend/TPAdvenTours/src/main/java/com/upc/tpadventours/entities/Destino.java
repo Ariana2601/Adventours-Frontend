@@ -51,4 +51,6 @@ public class Destino {
     @ManyToOne
     @JoinColumn(name = "id_empresa")
     private Empresa empresa;
+
+    //entidad completada
 }
