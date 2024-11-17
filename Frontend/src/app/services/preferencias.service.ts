@@ -24,3 +24,4 @@ export class PreferenciasService {
     return this.http.delete(this.url + "/preferencias/eliminarPreferenciasPorUsuarioId/" + id);
   }
 }
+// revisado
