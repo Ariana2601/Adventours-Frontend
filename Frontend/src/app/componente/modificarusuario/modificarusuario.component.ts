@@ -48,7 +48,7 @@ export class ModificarusuarioComponent {
   route: ActivatedRoute = inject(ActivatedRoute)
   id: number = 0
   rol: Rol = new Rol();
-
+  
   public idTipoSeleccionado: number = 0;
   tiporolservice:RolService = inject(RolService);
   lista: Rol [] = [];
@@ -72,7 +72,7 @@ export class ModificarusuarioComponent {
       console.log(data);
       this.id = data['id']; //capturando el id del listado
       this.edicion = data['id'] != null;//true, false
-      this.cargaForm();
+      this.cargaForm(); //carga la informacion del usuario
     });
   }
   loadLista(): void {
@@ -95,7 +95,6 @@ export class ModificarusuarioComponent {
       });
     } //del if
   } // de cargaForm
-
   onSubmit2() {
     if (this.usuariomodForm.valid) {
       const usuario: Usuario = new Usuario();
@@ -118,7 +117,6 @@ export class ModificarusuarioComponent {
       console.log("Formulario no valido");
     }
   }
-
   onExit() {
     this.router.navigate(['listas']);
   }
