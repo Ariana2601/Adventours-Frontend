@@ -26,7 +26,7 @@ export class PopularesComponent implements OnInit{
   ngOnInit(): void {
     this.obtenerDestinosPopulares();
   }
-
+  //Devuelve tres destinos ordenados por popularidad
   obtenerDestinosPopulares(): void {
     this.destinoService.destinospopulares().subscribe(
       (data: HURecomendacionesDeViajeDto[]) => {
