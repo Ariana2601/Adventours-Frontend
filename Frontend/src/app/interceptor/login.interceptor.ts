@@ -12,7 +12,7 @@ export const loginInterceptor: HttpInterceptorFn = (req, next) => {
   const token = localStorage.getItem('token');
   console.log("Token recuperado:", token)
   let authReq = req;
-  // Clona la solicitud y añade el encabezado de autorización
+  
   if (token) {
     authReq = req.clone({
       headers: req.headers.set('Authorization', "Bearer "+
@@ -33,3 +33,4 @@ export const loginInterceptor: HttpInterceptorFn = (req, next) => {
     })
   );
 };
+//Hasta aquí revisado y completado
