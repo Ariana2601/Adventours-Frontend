@@ -7,3 +7,4 @@ public interface PreferenciaService {
     List<Preferencia> buscarPreferenciasPorUsuario(Long usuarioId);
     void eliminarPreferenciasPorUsuario(Long usuarioId);
 }
+//completado
