@@ -97,7 +97,7 @@ export class IniciousuarioComponent implements OnInit {
   setTipoviaje(tipoviaje: string): void {
     this.selectedTipoviaje = tipoviaje;
   }
-
+  //Se registran las preferencias que el usuario eligio
   onRegistroPreferencia(): void {
     const preferencia: PreferenciaRequest = new PreferenciaRequest();
     preferencia.usuarioId = this.IDusuario;
@@ -140,6 +140,7 @@ export class IniciousuarioComponent implements OnInit {
     this.router.navigate(['recomendaciones']);
   }
 
+  
   enviarMensajeCorreo(): void {
 
     const nuevoContacto: Hucontacto = {
