@@ -62,7 +62,7 @@ export class CreacioncuentaComponent{
   ngOnInit(): void {
   }
 
-
+  //Registro de un usuario
   onSubmit() {
   if (this.usuarioForm.valid) {
     const usuario: Usuario = new Usuario();
