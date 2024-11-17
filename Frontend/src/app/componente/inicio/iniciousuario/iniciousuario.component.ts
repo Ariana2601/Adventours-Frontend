@@ -157,7 +157,7 @@ export class IniciousuarioComponent implements OnInit {
         this.mensaje = ''; // Limpiar mensaje
         this.tipoMensaje = ''; // Limpiar tipo de mensaje
       },
-      error => {
+      error => { //en  caso falle el registro
         console.error('Error al enviar el mensaje:', error);
         alert('Hubo un error al enviar el mensaje. Inténtalo nuevamente.');
       }
