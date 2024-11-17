@@ -24,4 +24,5 @@ public class Empresa {
     @Column(name = "Contacto_empresa", length = 100)
     private String contactoEmpresa;
 
+//ENTIDAD TERMINADA
 }
