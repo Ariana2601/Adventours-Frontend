@@ -6,7 +6,7 @@ import { Destino } from '../../model/destino';
 import {DatosService} from '../../services/datos.service';
 
 interface DestinoExtendido extends Destino {
-  imagenUrl: string;
+  imagenUrl: string; //Para colocar imagenes
 }
 
 @Component({
