@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #8C4747; /* Color del fondo del header */
+  padding: 10px;
+  color: white;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px; /* Ajusta el tamaño según sea necesario */
+}
+
+.header-content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.welcome-text {
+  font-size: 0.9rem;
+}
+
+nav {
+  background-color: #C73C3C; /* Color del fondo del menú de navegación */
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  background-color: #8C4747; /* Color del botón activo */
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: #D94242; /* Color del botón al pasar el mouse */
+}
+
+nav ul li:first-child a {
+  background-color: #4D4D4D; /* Color especial para el primer botón (INICIO) */
+}
+
+
+
+/* PARTE DEL PRIMER APARTADO ABAJO DE LA BARRA DE NAVEGACION (INICIO) */
+
+
+/* Contenedor centrado debajo de la barra de navegación */
+.center-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Estilos para la sección de la imagen y el texto */
+.image-text-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9f9f9;
+  width: 80%; /* Aumenta el ancho del contenedor */
+  max-width: 1200px; /* Para limitar el ancho máximo en pantallas grandes */
+}
+
+/* Estilo para la imagen a la izquierda */
+.image-section img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Estilo para el texto a la derecha */
+.text-section {
+  flex-grow: 1; /* Aumenta el ancho de la sección de texto */
+}
+
+.text-section p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Centrar el primer párrafo con el título */
+.text-section p:first-child {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px; /* Tamaño de fuente ligeramente mayor */
+  margin-bottom: 20px; /* Añadir más espacio debajo del título */
+}
+
+/*NUEVA PARTE PARA PREFERENCIAS*/
+
+
+
+/* Cuadro rojo de ancho completo */
+.red-bar {
+  width: 100%;
+  height: 50px;
+  background-color: #C73C3C; /* Color rojo */
+  margin-bottom: 20px;
+}
+
+/* Sección de preferencias */
+.preferences-section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Título de preferencias */
+.preferences-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Texto descriptivo */
+.preferences-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor de las preferencias */
+.preferences-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cada cuadro de preferencia */
+.preference-box-clima {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+/* Estilo de los títulos de cada preferencia */
+.preference-box-clima  h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Estilo de las etiquetas y checkboxes */
+.preference-box-clima  label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.preference-box-presupuesto {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.preference-box-presupuesto  h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.preference-box-presupuesto  label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.preference-box-actividades {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.preference-box-actividades  h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.preference-box-actividades  label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.preference-box-ritmo {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.preference-box-ritmo  h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.preference-box-ritmo  label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.preference-box-tipoviaje {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+/* Estilo de los títulos de cada preferencia */
+.preference-box-tipoviaje h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Estilo de las etiquetas y checkboxes */
+.preference-box-tipoviaje label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* Botón de actualizar */
+.populares-button {
+  margin-top: 20px;
+  margin-right: 60px;
+  margin-left: 60px;
+  text-align: center;
+  display: inline-block; /* Make the button inline-block to display side by side */
+}
+
+.populares-button button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.populares-button button:hover {
+  background-color: #333; /* Un poco más claro al pasar el ratón */
+}
+
+/* Botón de registrar */
+.registro-button {
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  text-align: center;
+  display: inline-block; /* Make the button inline-block to display side by side */
+}
+
+.registro-button button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registro-button button:hover {
+  background-color: #333; /* Un poco más claro al pasar el ratón */
+}
+/* Botón de recomendaciones */
+.recomendaciones-button {
+  margin-top: 20px;
+  margin-left: 60px;
+  text-align: center;
+  display: inline-block; /* Make the button inline-block to display side by side */
+}
+
+.recomendaciones-button button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recomendaciones-button button:hover {
+  background-color: #333; /* Un poco más claro al pasar el ratón */
+}
+/*SECCION DEL CLIENTE*/
+
+/* Sección de Atención al Cliente */
+.customer-service {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Texto grande a la izquierda y logo a la derecha */
+.connected-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.connected-section .text-left h2 {
+  font-size: 2rem;
+  color: #C73C3C;
+}
+
+.connected-section .logo-right img {
+  width: 120px;
+  height: auto;
+}
+
+/* Sección de Contacta con nosotros */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para los cuadros de contacto */
+.contact-box {
+  width: 80%;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+}
+
+/* Título de la sección */
+.contact-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Detalles de contacto */
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-details {
+  text-align: left;
+}
+
+.right-details .phone-number {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Escríbenos - Grupo de entrada */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Botón de enviar */
+.send-button {
+  text-align: center;
+}
+
+.send-button button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button button:hover {
+  background-color: #333;
+}
+
+
+/* Estilos para el botón de regresar arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 30px; /* Distancia desde la parte inferior de la pantalla */
+  right: 30px; /* Distancia desde la parte derecha de la pantalla */
+  width: 50px; /* Ancho de la esfera */
+  height: 50px; /* Altura de la esfera */
+  background-color: black; /* Color de fondo de la esfera */
+  color: white; /* Color de la flecha */
+  border-radius: 50%; /* Hace la esfera redonda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de la flecha */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s; /* Transición suave al aparecer/desaparecer */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.back-to-top.visible {
+  opacity: 1; /* Visible cuando se le añade la clase 'visible' */
+}
+
+
+.recommended-destinations {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.destination-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+}
+
+/* Estilo para cada mat-card (preferencias) */
+mat-card {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+/* Estilo para el contenido dentro de las mat-card */
+mat-card-content {
+  padding: 15px;
+}
+
+/* Título dentro de cada mat-card */
+mat-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para los checkboxes dentro de las mat-cards */
+mat-checkbox {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Estilo para las etiquetas de los checkboxes */
+mat-checkbox label {
+  font-size: 1rem;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* Estilo cuando se marca un checkbox */
+mat-checkbox.mat-checkbox-checked .mat-checkbox-background {
+  background-color: #C73C3C; /* Color del fondo cuando está marcado */
+  border-color: #C73C3C; /* Borde del checkbox cuando está marcado */
+}
+
+mat-checkbox.mat-checkbox-checked .mat-checkbox-checkmark {
+  color: white; /* Color de la marca de verificación cuando está marcado */
+}
+
+/* Estilo cuando el mouse pasa sobre los checkboxes */
+mat-checkbox:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ajuste para los checkboxes al lado de los títulos */
+mat-checkbox.mat-checkbox-label {
+  font-size: 1rem;
+}
+

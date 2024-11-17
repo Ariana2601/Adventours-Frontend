@@ -1,0 +1,12 @@
+<!-- Sección de populares -->
+<div class="red-bar" id="populares"></div>
+<!-- Título de populares -->
+<h1>Populares</h1>
+<div class="destinos-container">
+  <div *ngFor="let destino of destinosPopulares" class="destino-columna">
+    <h3>{{ destino.nombre }}</h3>
+    <img [src]="destino.imagenUrl" alt="{{ destino.nombre }}" class="destino-imagen" />
+    <h3>{{ destino.descripcion }}</h3>
+    <button class="destino-btn" (click)="onDetalles(destino.nombre)">Ver más</button> <!-- Pasar el nombre del destino -->
+  </div>
+</div>

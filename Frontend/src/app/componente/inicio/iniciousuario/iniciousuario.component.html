@@ -1,0 +1,241 @@
+<header>
+  <div class="logo">
+    <img src="assets/LOGO.jpg" alt="Logo de Adventours">
+  </div>
+  <div class="header-content">
+    <h1>TU VIAJE, TU ESTILO, NUESTRAS RECOMENDACIONES</h1>
+    <span class="welcome-text">Bienvenido {{ NombrePortada }}</span>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a routerLink="/iniciousuario">INICIO</a></li>
+    <li><a href="/iniciousuario/#preferencias">PREFERENCIAS</a></li>
+    <li><a href="/iniciousuario/#atencion-cliente">ATENCIÓN CLIENTE</a></li>
+    <li><a routerLink="/login">SALIR</a></li>
+  </ul>
+</nav>
+
+<!-- Cuadro centrado debajo de la barra de navegación -->
+<div class="center-content">
+  <div class="image-text-container">
+    <!-- Imagen a la izquierda -->
+    <div class="image-section">
+      <img src="assets/LOGO.jpg" alt="Imagen Logo">
+    </div>
+
+    <!-- Cuadro con texto a la derecha -->
+    <div class="text-section">
+      <p>
+        ¿Quienes somos?
+      </p>
+      <p>
+        Somos ADVENTOURS, un grupo de estudiantes de UPC, que con el objetivo de ayudar a extranjeros y peruanos a elegir un destino en base de sus gustos, creamos esta pagina para este fin. Agradecemos todas las recomendaciones que se nos puede hacer, siempre guardando el respeto correspondiente.
+        Agradecemos su preferencia por usarnos.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Cuadro rojo de ancho completo -->
+<p></p>
+<div class="red-bar"></div>
+<!-- Sección de preferencias -->
+<div class="preferences-section" id="preferencias">
+  <h2>Preferencias</h2>
+  <p>Descubre el destino perfecto adaptado a tus gustos y necesidades. Selecciona entre diversas categorías para personalizar tu búsqueda y descubrir el lugar ideal para tu próxima aventura.</p>
+
+  <div class="preferences-container">
+    <mat-card class="example-card">
+      <mat-card-content>
+        <h3>Clima:</h3>
+        <mat-checkbox
+          [checked]="selectedClima === 'Soleado'"
+          (change)="setClima('Soleado')"
+        >Soleado</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedClima === 'Frio'"
+          (change)="setClima('Frio')"
+        >Frio</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedClima === 'Templado'"
+          (change)="setClima('Templado')"
+        >Templado</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedClima === 'Arido'"
+          (change)="setClima('Arido')"
+        >Árido</mat-checkbox>
+
+        <h3>Presupuesto:</h3>
+        <mat-checkbox
+          [checked]="selectedPresupuesto === 'Economico'"
+          (change)="setPresupuesto('Economico')"
+        >Económico</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedPresupuesto === 'Medio'"
+          (change)="setPresupuesto('Medio')"
+        >Medio</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedPresupuesto === 'Lujo'"
+          (change)="setPresupuesto('Lujo')"
+        >Lujo</mat-checkbox>
+
+        <h3>Actividades:</h3>
+        <mat-checkbox
+          [checked]="selectedActividades === 'Gastronomía'"
+          (change)="setActividades('Gastronomía')"
+        >Gastronomía</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedActividades === 'Relax'"
+          (change)="setActividades('Relax')"
+        >Relax</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedActividades === 'Aventura'"
+          (change)="setActividades('Aventura')"
+        >Aventura</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedActividades === 'Cultural'"
+          (change)="setActividades('Cultural')"
+        >Cultural</mat-checkbox>
+
+        <h3>Ritmo de viaje:</h3>
+        <mat-checkbox
+          [checked]="selectedRitmoviaje === 'Calmado'"
+          (change)="setRitmoviaje('Calmado')"
+        >Calmado</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedRitmoviaje === 'Moderado'"
+          (change)="setRitmoviaje('Moderado')"
+        >Moderado</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedRitmoviaje === 'Intenso'"
+          (change)="setRitmoviaje('Intenso')"
+        >Intenso</mat-checkbox>
+
+        <h3>Tipo de viaje:</h3>
+        <mat-checkbox
+          [checked]="selectedTipoviaje === 'Montañas'"
+          (change)="setTipoviaje('Montañas')"
+        >Montañas</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedTipoviaje === 'Playas'"
+          (change)="setTipoviaje('Playas')"
+        >Playas</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedTipoviaje === 'Desiertos'"
+          (change)="setTipoviaje('Desiertos')"
+        >Desiertos</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedTipoviaje === 'Ciudades'"
+          (change)="setTipoviaje('Ciudades')"
+        >Ciudades</mat-checkbox>
+        <mat-checkbox
+          [checked]="selectedTipoviaje === 'Otros'"
+          (change)="setTipoviaje('Otros')"
+        >Otros</mat-checkbox>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Botón de actualizar -->
+  <div class="populares-button">
+    <button type="button" (click)="onPopulares()">Populares</button>
+  </div>
+
+  <!-- Botón de registro -->
+  <div class="registro-button">
+    <button type="button" (click)="onRegistroPreferencia()">Registrar</button>
+  </div>
+
+  <!-- Botón de registro -->
+  <div class="recomendaciones-button">
+    <button type="button" (click)="onRecomendaciones()">Recomendaciones</button>
+  </div>
+</div>
+
+<!-- Sección de Atención al Cliente -->
+<div class="customer-service" id="atencion-cliente">
+  <!-- Sección de Atención al Cliente -->
+  <div class="red-bar"></div>
+  <!-- Título de Atención al Cliente -->
+  <h2>Atención al Cliente</h2>
+  <!-- Texto grande a la izquierda y logo a la derecha -->
+  <div class="connected-section">
+    <div class="text-left">
+      <h2>¡CADA VEZ ESTAMOS MÁS CONECTADOS CONTIGO!</h2>
+    </div>
+    <div class="logo-right">
+      <img src="assets/LOGO.jpg" alt="Logo de Adventours">
+    </div>
+  </div>
+
+  <!-- Sección de Contacta con nosotros -->
+  <div class="contact-section">
+    <!-- Primer cuadro (Llámanos) -->
+    <div class="contact-box">
+      <h3>Contacta con nosotros</h3>
+      <div class="contact-details">
+        <div class="left-details">
+          <h4>Llámanos</h4>
+          <p>Horarios de Atención:</p>
+          <p>De Lunes a Sábado de 8:00 a.m. a 21:00 p.m.</p>
+        </div>
+        <div class="right-details">
+          <p class="phone-number">943 654 912</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segundo cuadro (Escríbenos) -->
+    <div class="contact-box">
+      <h3>Escríbenos</h3>
+      <p>Nos pondremos en contacto en un plazo aproximado de 24-48 horas</p>
+
+      <!-- Ingrese correo -->
+      <div class="input-group">
+        <label for="email">Ingrese correo electrónico:</label>
+        <input type="email" id="email" placeholder="Tu correo electrónico">
+      </div>
+
+      <!-- Mensaje -->
+      <div class="input-group">
+        <label for="mensaje">Mensaje:</label>
+        <input id="mensaje" placeholder="Escribe tu mensaje aquí" [(ngModel)]="mensaje">
+      </div>
+
+      <!-- Tipo de mensaje -->
+      <h4>Seleccione el tipo de mensaje:</h4>
+      <mat-checkbox
+        [checked]="tipoMensaje === 'Sugerencia'"
+        (change)="setTipoMensaje('Sugerencia')"
+      >Sugerencia</mat-checkbox
+      >
+      <mat-checkbox
+        [checked]="tipoMensaje === 'Queja'"
+        (change)="setTipoMensaje('Queja')"
+      >Queja</mat-checkbox
+      >
+      <mat-checkbox
+        [checked]="tipoMensaje === 'Opinión'"
+        (change)="setTipoMensaje('Opinión')"
+      >Opinión</mat-checkbox
+      >
+      <mat-checkbox
+        [checked]="tipoMensaje === 'Otros'"
+        (change)="setTipoMensaje('Otros')"
+      >Otros</mat-checkbox
+      >
+
+
+      <!-- Botón de enviar -->
+      <div class="send-button">
+        <button (click)="enviarMensajeCorreo()">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Botón de regresar arriba -->
+<div class="back-to-top" id="backToTop" (click)="scrollToTop()">
+  &#8593; <!-- Flecha hacia arriba -->
+</div>

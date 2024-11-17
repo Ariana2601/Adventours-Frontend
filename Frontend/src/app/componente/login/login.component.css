@@ -1,0 +1,48 @@
+.example-card {
+  margin: 0 auto;
+  width: 600px;
+  background-color: #e53935;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex; /* Utiliza flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+  margin-bottom: 20px; /* Espacio inferior para separar de otros elementos */
+}
+
+.logo {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+button[mat-raised-button] {
+  grid-column: span 2;
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #555;
+}

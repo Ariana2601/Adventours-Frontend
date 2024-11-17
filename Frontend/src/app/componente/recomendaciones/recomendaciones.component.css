@@ -1,0 +1,68 @@
+.red-bar {
+  width: 100%;
+  height: 50px;
+  background-color: #C73C3C; /* Color rojo */
+  margin-bottom: 20px;
+}
+
+/* Estilos del título */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Estilos del título */
+h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de destinos */
+.destinos-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Columnas de cada destino */
+.destino-columna {
+  text-align: center;
+  width: 30%; /* Ajusta el ancho según necesites */
+  padding: 15px;
+  border: 2px solid #ddd; /* Borde de cada columna */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle relieve */
+  background-color: #fff;
+  margin-bottom: 20px; /* Separación entre columnas */
+}
+
+/* Imagen de destino */
+.destino-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Estilos para el botón debajo de la descripción */
+.destino-btn {
+  padding: 10px 20px;
+  background-color: #f44336; /* Color de fondo rojo */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* Separación de la descripción */
+}
+
+.destino-btn:hover {
+  background-color: #d32f2f; /* Color al pasar el cursor */
+}
+

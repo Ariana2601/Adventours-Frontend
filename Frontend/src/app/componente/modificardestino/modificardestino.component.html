@@ -1,0 +1,77 @@
+<div class="logo-container">
+  <img src="../../../assets/LOGO.jpg" alt="Adventours Logo" class="logo">
+</div>
+<mat-card class="example-card">
+  <mat-card-title>Modificacion de datos del Destino</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="destinomodForm" class="form-container">
+      <div class="text-section">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre:</mat-label>
+          <input matInput formControlName="nombre" placeholder="Ingrese su usuario" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Descripcion</mat-label>
+          <input matInput formControlName="descripcion" placeholder="Ingrese" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Popularidad:</mat-label>
+          <input matInput formControlName="popularidad" placeholder="Ingrese" />
+        </mat-form-field>
+      </div>
+
+      <div class="destination-container">
+        <div class="destination-box">
+          <h3>Clima:</h3>
+          <mat-checkbox [checked]="selectedClima === 'Soleado'" (change)="setClima('Soleado')">Soleado</mat-checkbox>
+          <mat-checkbox [checked]="selectedClima === 'Frio'" (change)="setClima('Frio')">Frio</mat-checkbox>
+          <mat-checkbox [checked]="selectedClima === 'Templado'" (change)="setClima('Templado')">Templado</mat-checkbox>
+          <mat-checkbox [checked]="selectedClima === 'Arido'" (change)="setClima('Arido')">Árido (Seco)</mat-checkbox>
+        </div>
+
+        <div class="destination-box">
+          <h3>Presupuesto:</h3>
+          <mat-checkbox [checked]="selectedPresupuesto === 'Economico'" (change)="setPresupuesto('Economico')">Económico</mat-checkbox>
+          <mat-checkbox [checked]="selectedPresupuesto === 'Medio'" (change)="setPresupuesto('Medio')">Medio</mat-checkbox>
+          <mat-checkbox [checked]="selectedPresupuesto === 'Lujo'" (change)="setPresupuesto('Lujo')">Lujo</mat-checkbox>
+        </div>
+
+        <div class="destination-box">
+          <h3>Actividades:</h3>
+          <mat-checkbox [checked]="selectedActividades === 'Gastronomía'" (change)="setActividades('Gastronomía')">Gastronomía</mat-checkbox>
+          <mat-checkbox [checked]="selectedActividades === 'Relax'" (change)="setActividades('Relax')">Relax</mat-checkbox>
+          <mat-checkbox [checked]="selectedActividades === 'Aventura'" (change)="setActividades('Aventura')">Aventura</mat-checkbox>
+          <mat-checkbox [checked]="selectedActividades === 'Cultural'" (change)="setActividades('Cultural')">Cultural</mat-checkbox>
+        </div>
+
+        <div class="destination-box">
+          <h3>Ritmo de viaje:</h3>
+          <mat-checkbox [checked]="selectedRitmoViaje === 'Calmado'" (change)="setRitmoViaje('Calmado')">Calmado</mat-checkbox>
+          <mat-checkbox [checked]="selectedRitmoViaje === 'Moderado'" (change)="setRitmoViaje('Moderado')">Moderado</mat-checkbox>
+          <mat-checkbox [checked]="selectedRitmoViaje === 'Intenso'" (change)="setRitmoViaje('Intenso')">Intenso</mat-checkbox>
+        </div>
+
+        <div class="destination-box">
+          <h3>Tipo de viaje:</h3>
+          <mat-checkbox [checked]="selectedTipoViaje === 'Montañas'" (change)="setTipoViaje('Montañas')">Montañas</mat-checkbox>
+          <mat-checkbox [checked]="selectedTipoViaje === 'Playas'" (change)="setTipoViaje('Playas')">Playas</mat-checkbox>
+          <mat-checkbox [checked]="selectedTipoViaje === 'Desiertos'" (change)="setTipoViaje('Desiertos')">Desiertos</mat-checkbox>
+          <mat-checkbox [checked]="selectedTipoViaje === 'Ciudades'" (change)="setTipoViaje('Ciudades')">Ciudades</mat-checkbox>
+          <mat-checkbox [checked]="selectedTipoViaje === 'Otros'" (change)="setTipoViaje('Otros')">Otros</mat-checkbox>
+        </div>
+      </div>
+
+      <!-- Botón centrado -->
+      <div class="update-button">
+        <button mat-raised-button color="primary" (click)="onSubmit()">REGISTRAR</button>
+      </div>
+
+      <div class="update-button">
+        <button mat-raised-button color="primary" (click)="onExit()">VOLVER</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+
+

@@ -1,0 +1,25 @@
+<div class="logo-container">
+  <img src="../../../assets/LOGO.jpg" alt="Adventours Logo" class="logo">
+</div>
+<mat-card class="example-card">
+  <mat-card-title>Modificacion de datos de la Empresa</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="empresamodForm" class="form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre de la Empresa:</mat-label>
+        <input matInput formControlName="nombreEmpresa" placeholder="Nombre Empresa" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Contacto de Empresa:</mat-label>
+        <input matInput formControlName="contactoEmpresa" placeholder="Contacto de Empresa" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="onSubmit2()">REGISTRAR</button>
+      <button mat-raised-button color="primary" (click)="onExit()">VOLVER</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+
+

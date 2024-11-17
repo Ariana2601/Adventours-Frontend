@@ -1,0 +1,258 @@
+<header>
+  <div class="logo">
+    <img src="assets/LOGO.jpg" alt="Logo de Adventours">
+  </div>
+  <div class="header-content">
+    <h1>TU VIAJE, TU ESTILO, NUESTRAS RECOMENDACIONES</h1>
+    <span class="welcome-text">Bienvenido {{ NombrePortada }}</span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a routerLink="/inicioadministrador">BIENVENIDA</a></li>
+    <li><a href="/inicioadministrador/#ingresar-destinos">INGRESAR DESTINOS</a></li>
+    <li><a href="/inicioadministrador/#modificar-destinos">ALTERAR DESTINOS</a></li>
+    <li><a href="/inicioadministrador/#ingresar-empresas">INGRESAR EMPRESAS</a></li>
+    <li><a routerLink="/listas">INGRESAR A LISTAS</a></li>
+    <li><a routerLink="/login">SALIR</a></li>
+  </ul>
+</nav>
+
+<!-- Cuadro centrado debajo de la barra de navegación -->
+<div class="center-content">
+  <div class="image-text-container">
+    <div class="text-section">
+      <p>
+        Bienvenido al administrador de dispositivos, por favor ingrese todos los campos cuando ingrese, modifique o elimine destinos turísticos y/o ingrese empresas, de esta forma la página funcionará al 100% de su capacidad.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="red-bar"></div>
+
+<!-- Sección de ingresar destinos -->
+<div class="destinations-section" id="ingresar-destinos">
+  <form [formGroup]="destinoForm" class="form-container">
+    <h2>Ingresar Destinos</h2>
+
+    <div class="center-content">
+      <div class="image-text-container">
+        <div class="image-section">
+          <img src="assets/LOGO.jpg" alt="Imagen Destino">
+        </div>
+
+        <div class="text-section">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre:</mat-label>
+            <input matInput formControlName="nombre" placeholder="Ingrese su usuario" />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Descripcion</mat-label>
+            <input matInput formControlName="descripcion" placeholder="Ingrese" />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Popularidad:</mat-label>
+            <input matInput formControlName="popularidad" placeholder="Ingrese" />
+          </mat-form-field>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="destination-container">
+      <div class="destination-box">
+        <h3>Clima:</h3>
+        <mat-checkbox [checked]="selectedClima === 'Soleado'" (change)="setClima('Soleado')">Soleado</mat-checkbox>
+        <mat-checkbox [checked]="selectedClima === 'Frio'" (change)="setClima('Frio')">Frio</mat-checkbox>
+        <mat-checkbox [checked]="selectedClima === 'Templado'" (change)="setClima('Templado')">Templado</mat-checkbox>
+        <mat-checkbox [checked]="selectedClima === 'Arido'" (change)="setClima('Arido')">Árido (Seco)</mat-checkbox>
+      </div>
+
+      <div class="destination-box">
+        <h3>Presupuesto:</h3>
+        <mat-checkbox [checked]="selectedPresupuesto === 'Economico'" (change)="setPresupuesto('Economico')">Económico</mat-checkbox>
+        <mat-checkbox [checked]="selectedPresupuesto === 'Medio'" (change)="setPresupuesto('Medio')">Medio</mat-checkbox>
+        <mat-checkbox [checked]="selectedPresupuesto === 'Lujo'" (change)="setPresupuesto('Lujo')">Lujo</mat-checkbox>
+      </div>
+
+      <div class="destination-box">
+        <h3>Actividades:</h3>
+        <mat-checkbox [checked]="selectedActividades === 'Gastronomía'" (change)="setActividades('Gastronomía')">Gastronomía</mat-checkbox>
+        <mat-checkbox [checked]="selectedActividades === 'Relax'" (change)="setActividades('Relax')">Relax</mat-checkbox>
+        <mat-checkbox [checked]="selectedActividades === 'Aventura'" (change)="setActividades('Aventura')">Aventura</mat-checkbox>
+        <mat-checkbox [checked]="selectedActividades === 'Cultural'" (change)="setActividades('Cultural')">Cultural</mat-checkbox>
+      </div>
+
+      <div class="destination-box">
+        <h3>Ritmo de viaje:</h3>
+        <mat-checkbox [checked]="selectedRitmoViaje === 'Calmado'" (change)="setRitmoViaje('Calmado')">Calmado</mat-checkbox>
+        <mat-checkbox [checked]="selectedRitmoViaje === 'Moderado'" (change)="setRitmoViaje('Moderado')">Moderado</mat-checkbox>
+        <mat-checkbox [checked]="selectedRitmoViaje === 'Intenso'" (change)="setRitmoViaje('Intenso')">Intenso</mat-checkbox>
+      </div>
+
+      <div class="destination-box">
+        <h3>Tipo de viaje:</h3>
+        <mat-checkbox [checked]="selectedTipoViaje === 'Montañas'" (change)="setTipoViaje('Montañas')">Montañas</mat-checkbox>
+        <mat-checkbox [checked]="selectedTipoViaje === 'Playas'" (change)="setTipoViaje('Playas')">Playas</mat-checkbox>
+        <mat-checkbox [checked]="selectedTipoViaje === 'Desiertos'" (change)="setTipoViaje('Desiertos')">Desiertos</mat-checkbox>
+        <mat-checkbox [checked]="selectedTipoViaje === 'Ciudades'" (change)="setTipoViaje('Ciudades')">Ciudades</mat-checkbox>
+        <mat-checkbox [checked]="selectedTipoViaje === 'Otros'" (change)="setTipoViaje('Otros')">Otros</mat-checkbox>
+      </div>
+    </div>
+
+    <div class="update-button">
+      <button (click)="onRegistrarDestino()">REGISTRAR</button>
+    </div>
+  </form>
+</div>
+
+<div class="red-bar"></div>
+
+<!-- Sección de modificar destinos -->
+<div class="mdestinations-section" id="modificar-destinos">
+  <h2 class="section-title">Alterar Destinos</h2>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <!--  Column -->
+      <ng-container matColumnDef="idDestino">
+        <th mat-header-cell *matHeaderCellDef> No. Destino </th>
+        <td mat-cell *matCellDef="let element"> {{element.idDestino}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </th>
+        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="clima">
+        <th mat-header-cell *matHeaderCellDef> Clima </th>
+        <td mat-cell *matCellDef="let element"> {{element.clima}} </td>
+      </ng-container>
+
+      <!-- Fecha Column -->
+      <ng-container matColumnDef="presupuesto">
+        <th mat-header-cell *matHeaderCellDef> Presupuesto </th>
+        <td mat-cell *matCellDef="let element"> {{element.presupuesto}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="actividades">
+        <th mat-header-cell *matHeaderCellDef> Actividades </th>
+        <td mat-cell *matCellDef="let element"> {{element.actividades}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="ritmoViaje">
+        <th mat-header-cell *matHeaderCellDef> Ritmo de Viaje </th>
+        <td mat-cell *matCellDef="let element"> {{element.ritmoViaje}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="tipoViaje">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Viaje </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoViaje}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="popularidad">
+        <th mat-header-cell *matHeaderCellDef> Popularidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.popularidad}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accion01">
+        <th mat-header-cell *matHeaderCellDef> Update </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="primary"
+                  [routerLink]="['/modificardestino',element.idDestino]">
+            <span class="material-icons">update</span>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accion02">
+        <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="warn"
+                  (click)="openDialog(element.idDestino)"><span class="material-icons">delete_sweep</span></button>
+        </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
+
+<div class="red-bar"></div>
+
+<!-- Sección de ingresar empresas -->
+<div class="entcompanies-section" id="ingresar-empresas">
+  <h2>Ingresar Empresas</h2>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <form [formGroup]="empresaForm" class="form-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre Empresa:</mat-label>
+          <input matInput formControlName="nombreEmpresa" placeholder="Nombre Empresa" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Contacto Empresa:</mat-label>
+          <input matInput formControlName="contactoEmpresa" placeholder="Contacto Empresa" />
+        </mat-form-field>
+        <div class="register-button">
+          <button mat-raised-button color="primary" (click)="onSubmit()">REGISTRAR</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- Sección de Asignar destinos a empresas -->
+<div class="entcompanies-section" id="asignar-empresas">
+  <mat-card class="example-card">
+    <mat-card-title class="section-title">Asignar destino a empresa</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="asignarForm" class="form-container">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Destino</mat-label>
+          <mat-select formControlName="destinopue" [(value)]="iddestinoSeleccionado" required>
+            <mat-option *ngFor="let a of lista" [value]="a"> <!-- Pasar el objeto completo -->
+              {{ a.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Empresa</mat-label>
+          <mat-select formControlName="empresapue" [(value)]="idempresaSeleccionado" required>
+            <mat-option *ngFor="let a2 of lista2" [value]="a2"> <!-- Pasar el objeto completo -->
+              {{ a2.nombreEmpresa }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="register-button">
+          <button mat-raised-button color="primary" (click)="onSubmit4()">ASIGNAR</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+<div class="back-to-top2" id="backToTop" (click)="scrollToTop()">
+  &#8593; <!-- Flecha hacia arriba -->
+</div>

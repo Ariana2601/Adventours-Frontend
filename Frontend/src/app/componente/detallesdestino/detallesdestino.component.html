@@ -1,0 +1,27 @@
+<div class="destino-detalle-container" *ngIf="destino; else noDestino">
+  <div class="destino-contenido">
+    <!-- Sección izquierda: Imagen y nombre -->
+    <div class="destino-izquierda">
+      <!-- Imagen del destino -->
+      <div class="destino-imagen-container">
+        <img [src]="destino.imagenUrl" alt="{{ destino.nombre }}" class="destino-imagen" />
+      </div>
+      <!-- Nombre del destino -->
+      <h1 class="destino-nombre">{{ destino.nombre }}</h1>
+    </div>
+
+    <!-- Sección derecha: Descripción -->
+    <div class="destino-derecha">
+      <h2>Descripción:</h2>
+      <p>{{ destino.descripcion }}</p>
+      <!-- Nombre de la empresa del destino -->
+      <h2>Empresa:</h2>
+      <p>{{ destino.empresa.contactoEmpresa }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Plantilla para cuando no se encuentra el destino -->
+<ng-template #noDestino>
+  <p>No se encontró información del destino.</p>
+</ng-template>
