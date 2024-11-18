@@ -61,3 +61,4 @@ export class DetallesdestinoComponent implements OnInit {
     return rutaImagen; //devuelve la imagen
   }
 }
+//Codigo terminado//
